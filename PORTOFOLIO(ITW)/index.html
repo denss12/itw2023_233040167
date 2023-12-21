@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デニス</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h2>デニス</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <div id="home" class="home"> 
+        <div class="wrapper-1"data-aos="fade-down"data-aos-duration="1000">
+            <div class="text">
+                <h1>
+                    Hi There,<br>
+                    I'm Dennis Setya
+                </h1>
+                <p>This is My Website Portofolio</p>
+                <!-- example icon -->
+                <div class="social-media">
+                    <a href="https://www.instagram.com/dennissetya33?igshid=OGQ5ZDc2ODk2ZA=="><i
+                            data-feather="instagram"></i></a>
+                    <a href="https://www.facebook.com/dennis.setyapradana?mibextid=gik2fB"><i
+                            data-feather="facebook"></i></a>
+                    <a href="https://github.com/denss12"><i data-feather="github"></i></a>
+                </div>
+            </div>
+            <div class="hero"></div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="about">
+        <div class="wrapper-2"data-aos="fade-up"data-aos-duration="1000">
+            <h1>About</h1>
+            <img src="./img/WhatsApp Image 2023-12-20 at 13.00.50_337091ca.jpg" alt="">
+            <p>Saya Dennis Setya Pradana saat ini saya berstatus Mahasiswa di Universitas Pasundan. Saya mengambil jurusan Informatika karena saya ingin melanjutkan pendidikan saya dari SMK yang berjurusan Multimedia yang dominan ke Design dan Editing Video, Namun saya sangat senang belajar hal baru terutama di Bidang Programming, Saya mampu memaksimalkan kemampuan saya di Jurusan Informatika. </p>
+        </div>
+      </div>
+    </div>    
+
+    <!-- Education -->
+    <div id="education" class="education">
+            <h1 data-aos="fade-down"data-aos-duration="1000">Education</h1>
+            <div class="wrapper-3">
+                <div class="img sd"data-aos="flip-left"data-aos-duration="1000"></div>
+                <div class="img smp"data-aos="flip-left"data-aos-duration="1000"></div>
+                <div class="img sma"data-aos="flip-left"data-aos-duration="1000"></div>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Skill -->
+    <div id="skill" class="skill">
+        <div class="wrapper-4"data-aos="fade-down"data-aos-duration="1000">
+            <h2>Skill</h2>
+            <div class="skill-column">
+                <div class="skill-item"data-aos="fade-up-right"data-aos-duration="1000">
+                    <img src="./img/AfterEffect.png" alt="" width="100px" height="100px">
+                    <img src="./img/Filmora.png" alt="" width="100px" height="100px">
+                    <img src="./img/Premiere.png" alt="" width="95 px" height="90px">
+                    <h3>Video Editor</h3>
+                    <p>After Effect    Filmora     Premiere</p>
+                </div>
+                <div class="skill-item"data-aos="fade-up"data-aos-duration="1000">
+                    <img src="./img/photoshop.png" alt="" width="250px" height="120px">
+                    <img src="./img/Coreldraw.jpg" alt="" width="110px" height="132px">
+                    <h3>Designer</h3>
+                    <p>Adobe Photoshop  CorelDraw</p>
+                </div>
+                <div class="skill-item"data-aos="fade-up-left"data-aos-duration="1000">
+                    <img src="./img/HTML-CSS-Review.png" alt="" width="150px" height="150px">
+                    <h3>Programming</h3>
+                    <p>HTML  CSS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <section id="contact-section" class="contact-section">
+        <div id="contact" class="wrapper-5"data-aos="zoom-out-down"data-aos-duration="1000">
+          <h2>Contact Me</h2>
+          <form name="wpu-contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="nama" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="pesan" required>
+            </textarea>
+            
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw0tP1TJQa1AHdDyrn8tnswrANSyd1Wla-Tq7ovucnG9-j-5m0Sl8bJi-Qeg9tWG9MbtA/exec'
+        const form = document.forms['wpu-contact-form']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          //
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+
+<footer>
+    <p>Copyright 2023. DennisSetyaPradana.</p>
+</footer>
+
+</html>
